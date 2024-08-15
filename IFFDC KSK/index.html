@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          style="width: 100px; height: 40px"
+          src="./image/agro_mod_symbol.jpg"
+          alt=""
+        />
+        <a
+          href="C:\Users\rishi\Desktop\new project\project\vendor connect\IFFDC KSK"
+          class="header__logo"
+          >AGRO MOD</a
+        >
+      </div>
+      <nav class="nav" id="nav-menu">
+        <ion-icon name="close-outline" class="header__close"></ion-icon>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../home page/home_page.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../Government schemes/index.html" class="nav__link"
+              >Government Policies
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="../market analysis/index.html" class="nav__link"
+              >Market Analysis</a
+            >
+          </li>
+          <li class="nav__item">
+            <a
+              href="../outside_page_vendor connect/index.html"
+              class="nav__link"
+              >Vendor Connect</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../community_connect/index.html" class="nav__link"
+              >Community Connect</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../Contact Us edit/index.html" class="nav__link"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../login kro/index.html" class="nav__link"
+              >Login/Register</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ion-icon
+        name="menu-outline"
+        class="header__toggle"
+        id="toggle-menu"
+      ></ion-icon>
+    </header>
+    <script src="main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Vendor Id: GSTIN 101</h2>
+        <h3>Vendor Details</h3>
+        <div class="profile-picture">
+          <img src="./image/logo.jpeg" alt="Profile Picture" />
+        </div>
+
+        <p>IFFDC KSK</p>
+        <p>Mobile no. 1234567890</p>
+        <p>Email: xyz@gmail.com</p>
+        <button class="connect-button">Connect With Vendors</button>
+        <form>
+          <label for="mobile">Alternate Mobile:</label>
+          <input type="text" id="mobile" name="mobile" /><br />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" /><br />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="50"></textarea
+          ><br />
+          <label for="upload">Upload Image:</label>
+          <input type="file" id="upload" name="upload" /><br />
+          <label for="note">Add Voice Note:</label>
+          <div class="voice-note-container">
+            <button id="mic-button" class="mic-button">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <div id="recording-status" class="recording-status hidden">
+              Recording...
+            </div>
+          </div>
+          <button type="submit" class="appointment-button">
+            Book Appointment
+          </button>
+        </form>
+      </div>
+      <div class="main-content">
+        <div class="header">
+          <div class="filter-option">
+            <button class="filter-button">Filter Option</button>
+            <div class="dropdown-content">
+              <a href="#">Low-High</a>
+              <a href="#">High-Low</a>
+              <a href="#">Rating</a>
+            </div>
+          </div>
+          <div class="cart-container">
+            <button class="cart-button">
+              <i class="fas fa-shopping-cart cart-logo"></i>
+            </button>
+          </div>
+        </div>
+        <div class="products">
+          <div class="product-card">
+            <img src="./image/nano_urea.avif" alt="Product Image" />
+            <p>Nano Urea</p>
+            <p>Rating: <span class="stars">★★★★★</span></p>
+            <p>Price: 225</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/sagarika.png" alt="Product Image" />
+            <p>Liquid Sagarika</p>
+            <p>Rating <span class="stars">★★★★</span></p>
+            <p>Price: 70</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/dap.png" alt="Product Image" />
+            <p>D A P</p>
+            <p>Rating: <span class="stars">★★★★★</span></p>
+            <p>Price: 1350</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img
+              src="./image/Bharat-Urea-SPIC-NC-Urea.png"
+              alt="Product Image"
+            />
+            <p>Urea</p>
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 330</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/kokoro.jpeg" alt="Product Image" />
+            <p>Kokoro</p>
+
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 320</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="./image/atari.png" alt="Product Image" />
+            <p>Atari</p>
+
+            <p>Rating: 185<span class="stars">★★★★★</span></p>
+            <p></p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/zakiyama_plus_700_ml_2.jpg" alt="Product Image" />
+            <p>Zakiyama Plus</p>
+
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 240</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img
+              src="./image/Mono_Potassium_Phosphate.png"
+              alt="Product Image"
+            />
+            <p>Mono Potassium Phosphate</p>
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 260</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/npk-.jpg" alt="Product Image" />
+            <p>NPK</p>
+            <p>Rating: <span class="stars">★★★★★</span></p>
+            <p>Price: 1500</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/bio_organic_manure.webp" alt="Product Image" />
+            <p>Bio-organic Manure</p>
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 55/kg</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/genki _plus.jpeg" alt="Product Image" />
+            <p>Genki Plus</p>
+
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 650</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+
+          <div class="product-card">
+            <img src="./image/shoku.jpg" alt="Product Image" />
+            <p>Shoku</p>
+
+            <p>Rating <span class="stars">★★★★★</span></p>
+            <p>Price: 730 INR/Bag</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            <!-- Add to Cart Button -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+
+      <ul class="social_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li><a href="../home page/home_page.html">Home</a></li>
+        <li><a href="../Contact Us edit/index.html">About</a></li>
+        <li><a href="../Contact Us edit/index.html">contact</a></li>
+      </ul>
+      <p>©2024 AgroMod | All right Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <div class="translator">
+      <div id="google_translate_element"></div>
+    </div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
