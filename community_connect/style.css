@@ -1,0 +1,426 @@
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the body */
+}
+
+.container {
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the container */
+}
+
+.container-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #fff;
+  padding: 20px 40px;
+  background: linear-gradient(
+    90deg,
+    #007bff,
+    #00d4ff
+  ); /* Gradient background */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the container title */
+  position: relative;
+  word-wrap: break-word; /* Allow long words to break and wrap to the next line */
+  white-space: normal; /* Allow the text to wrap */
+  text-align: center;
+  min-height: 60px; /* Ensure there is enough height to center the content vertically */
+}
+
+.container-title h2 {
+  margin: 0; /* Remove default margin */
+}
+
+.container-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 60%;
+  height: 3px;
+  background: #fff;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adds space between the select elements */
+  margin-bottom: 20px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the input box */
+}
+
+.input-box label {
+  margin: 10px 0 5px;
+}
+
+.input-box select {
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s, background-color 0.3s; /* Transition for hover effects */
+}
+
+.input-box select:hover {
+  border-color: #007bff; /* Change border color on hover */
+  background-color: #f0f8ff; /* Change background color on hover */
+}
+
+/* Card container styles */
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the card container */
+}
+
+.card__article {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for the cards */
+}
+
+.card__article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: bounce 0.3s; /* Bounce effect on hover */
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__data {
+  padding: 15px;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card__label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .card__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__article {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    gap: 10px; /* Reduce gap on small screens */
+  }
+
+  .input-box select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .container-title {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .container-title::before {
+    width: 80%; /* Adjust underline width for smaller screens */
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+header {
+  display: flex;
+  background-color: #149279;
+  justify-content: space-around;
+  padding: 1rem 0;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.header__logo {
+  color: #eee;
+  font-weight: 600;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  margin: 0 8px;
+}
+.nav__link {
+  padding: 10px;
+  color: #eeee;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.nav__link:hover {
+  background-color: #00adb5;
+}
+.header__toggle,
+.header__close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .header__close:hover {
+    background-color: #00adb5;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #149279;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav__item {
+    margin: 2rem 0;
+  }
+  .show {
+    right: 0;
+  }
+}
+footer {
+  position: relative;
+  width: 100%;
+  background: #159b80;
+  min-width: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5%;
+}
+
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li a {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+}
+footer p {
+  columns: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./images/wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave 3s linear infinite;
+}
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.translator {
+  position: fixed;
+  top: 50%; /* Move to center vertically */
+  right: 20px; /* Move to right edge */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1000;
+}
+#google_translate_element {
+  font-size: 12px; /* Font size */
+  width: 40px; /* Minimized width */
+  height: 40px; /* Minimized height */
+  padding: 5px; /* Minimized padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0000;
+  transition: all 0.5s ease-in-out; /* Add transition effect */
+  overflow: hidden; /* Hide excess content */
+  text-align: center; /* Center the text */
+}
+#google_translate_element:before {
+  content: "\f1ab"; /* Google Translate icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+#google_translate_element:hover {
+  font-size: 16px; /* Expanded font size */
+  width: 200px; /* Expanded width */
+  height: 50px; /* Expanded height */
+  padding: 10px; /* Expanded padding */
+  border-radius: 10px; /* Make it a rectangle with rounded corners */
+  background-color: #f9f9f9; /* Normal background color when expanded */
+}
+#google_translate_element:hover:before {
+  display: none; /* Hide the icon when expanded */
+}
