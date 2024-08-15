@@ -1,0 +1,465 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+header {
+  display: flex;
+  background-color: #149279;
+  justify-content: space-around;
+  padding: 1rem 0;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.header__logo {
+  color: #eee;
+  font-weight: 600;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  margin: 0 8px;
+}
+.nav__link {
+  padding: 10px;
+  color: #eeee;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.nav__link:hover {
+  background-color: #00adb5;
+}
+.header__toggle,
+.header__close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .header__close:hover {
+    background-color: #00adb5;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #149279;
+    color: #eeee;
+    width: 60%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+    border-radius: 0 0 0 50%;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav__item {
+    margin: 2rem 0;
+  }
+  .show {
+    right: 0;
+  }
+}
+
+h1 {
+  margin: 20px 0;
+  color: #333;
+  font-size: 2em;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row; /* Change to row to align items horizontally */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px;
+  gap: 10px; /* Add some gap between the items */
+}
+
+#state-select,
+#district-select,
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1; /* Allow items to grow to fill space */
+}
+
+.search-input {
+  max-width: 100px; /* Limit the width for the pincode input */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+}
+
+.search-input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.search-button:hover {
+  background-color: #555;
+}
+
+#state-select,
+#district-select {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.vendor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vendor-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.vendor-item:hover {
+  transform: scale(1.05);
+}
+
+.vendor-item img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.star,
+.star-empty {
+  font-size: 1.5em;
+  margin: 0 2px;
+}
+
+.star {
+  color: gold;
+}
+
+.star-empty {
+  color: #ccc;
+}
+
+.connect-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.connect-button:hover {
+  background-color: #218838;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input,
+  #state-select,
+  #district-select {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .vendor-item {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .vendor-item {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .vendor-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .star-rating {
+    font-size: 1.2em;
+  }
+
+  .connect-button {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade to fully visible */
+  }
+}
+
+/* Style the vendor ID */
+.vendor-item p {
+  color: #666; /* Gray color for Vendor ID */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+/* Add animation to the vendor list */
+.vendor-list {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 0.5s forwards; /* Animation effect */
+}
+
+.translator {
+  position: fixed;
+  top: 50%; /* Move to center vertically */
+  right: 20px; /* Move to right edge */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1000;
+}
+#google_translate_element {
+  font-size: 12px; /* Font size */
+  width: 40px; /* Minimized width */
+  height: 40px; /* Minimized height */
+  padding: 5px; /* Minimized padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0000;
+  transition: all 0.5s ease-in-out; /* Add transition effect */
+  overflow: hidden; /* Hide excess content */
+  text-align: center; /* Center the text */
+}
+#google_translate_element:before {
+  content: "\f1ab"; /* Google Translate icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+#google_translate_element:hover {
+  font-size: 16px; /* Expanded font size */
+  width: 200px; /* Expanded width */
+  height: 50px; /* Expanded height */
+  padding: 10px; /* Expanded padding */
+  border-radius: 10px; /* Make it a rectangle with rounded corners */
+  background-color: #f9f9f9; /* Normal background color when expanded */
+}
+#google_translate_element:hover:before {
+  display: none; /* Hide the icon when expanded */
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #159b80;
+  min-width: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+}
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5%;
+}
+
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li a {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+}
+footer p {
+  columns: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./images/wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave 3s linear infinite;
+}
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
